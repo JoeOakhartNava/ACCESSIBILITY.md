@@ -1895,6 +1895,20 @@ sources:
     owner: null
     license: null
     status: "active"
+  - id: civicactions-open-requirements-accessibility
+    domain: "CivicActions Open Requirements Library - Accessibility"
+    url: "github.com/CivicActions/open-practice"
+    full_url: "https://github.com/CivicActions/open-practice/blob/main/open-requirements-library/accessibility.md"
+    best_for: "procurement, Section 508, government contracts, RFP requirements, vendor requirements, WCAG compliance in procurement"
+    description: "Comprehensive, vendor-agnostic framework for integrating Section 508 and WCAG 2.2 Level AA accessibility requirements into government procurements. Provides copy-paste requirements for contracting officers to include in solicitations, covering project roles, task requirements, ACR processes, and quality assurance for website maintenance and enhancement."
+    authority_level: "to_review"
+    topic_tags: ["procurement", "section-508", "government", "rfp", "wcag", "contracting"]
+    jurisdiction: "us"
+    wcag_version: ["2.2"]
+    last_reviewed: "2026-02-23"
+    owner: "CivicActions"
+    license: "CC-BY-SA-4.0"
+    status: "active"
   - id: wcag-understanding-docs
     domain: "W3C WCAG Understanding Docs"
     url: "w3.org/WAI/WCAG22/Understanding/"

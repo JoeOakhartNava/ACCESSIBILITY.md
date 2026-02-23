@@ -26,7 +26,7 @@ This index helps you browse all example assets used by `ACCESSIBILITY.md`.
 
 - [A11Y_SHIFT_LEFT_WORKFLOW.yml](./A11Y_SHIFT_LEFT_WORKFLOW.yml)
 - [PRE_COMMIT_ACCESSIBILITY_SAMPLE.yaml](./PRE_COMMIT_ACCESSIBILITY_SAMPLE.yaml)
-- [TRUSTED_SOURCES.yaml](./TRUSTED_SOURCES.yaml)
+- [TRUSTED_SOURCES.yaml](./TRUSTED_SOURCES.yaml) - Includes procurement requirements from [CivicActions Open Requirements Library](https://github.com/CivicActions/open-practice/blob/main/open-requirements-library/accessibility.md)
 
 ## Prompt Starter
 
