@@ -155,8 +155,9 @@ nav {
 }
 
 #theme-toggle {
-  /* Note: Parent uses justify-content: space-between for spacing.
-     margin-left: auto is a fallback if additional header items are added. */
+  /* Optional: margin-left: auto provides fallback positioning if additional
+     header items are added. Currently, justify-content: space-between on
+     parent handles the layout with just nav and button. */
   margin-left: auto;
   padding: 0.5rem;
   border: 1px solid var(--color-border);
@@ -188,6 +189,17 @@ nav {
 
 .moon-icon {
   display: block;
+}
+
+/* If system prefers dark mode, show sun icon before JS loads */
+@media (prefers-color-scheme: dark) {
+  .sun-icon {
+    display: block;
+  }
+  
+  .moon-icon {
+    display: none;
+  }
 }
 
 /* Show/hide appropriate icon based on theme */
