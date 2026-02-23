@@ -130,6 +130,10 @@ title: ACCESSIBILITY.md
         <p><a href="./AGENTS.html">AGENTS.md - AI coding assistant guidance</a></p>
       </article>
       <article class="card">
+        <h3>Browser Support Policy</h3>
+        <p><a href="./BROWSER_SUPPORT.html">BROWSER_SUPPORT.md - Browser version support guarantees</a></p>
+      </article>
+      <article class="card">
         <h3>Contributing Guide</h3>
         <p><a href="./CONTRIBUTING.html">CONTRIBUTING.md - How to contribute to this project</a></p>
       </article>

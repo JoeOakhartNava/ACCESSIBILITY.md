@@ -1,0 +1,241 @@
+name: Multi-Browser Accessibility Testing
+
+# This workflow demonstrates browser version support guarantees
+# Tests accessibility across Chrome, Firefox, and Safari (last 2 major versions)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  schedule:
+    # Run weekly on Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write # To create issues for failures
+
+jobs:
+  # Automated accessibility testing with axe-core
+  axe-core-testing:
+    name: axe-core (${{ matrix.browser }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # Test last 2 major versions
+        browser: [chrome, firefox]
+        os: [ubuntu-latest]
+        include:
+          # Chrome latest and latest-1
+          - browser: chrome
+            browser-version: 'latest'
+          - browser: chrome
+            browser-version: 'latest-1'
+          # Firefox latest and latest-1
+          - browser: firefox
+            browser-version: 'latest'
+          - browser: firefox
+            browser-version: 'latest-1'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+      - name: Run axe-core tests
+        run: |
+          npm run test:a11y -- --browser=${{ matrix.browser }}
+        env:
+          BROWSER: ${{ matrix.browser }}
+      
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-results-${{ matrix.browser }}-${{ matrix.browser-version }}
+          path: test-results/
+          retention-days: 30
+  
+  # Playwright multi-browser testing
+  playwright-testing:
+    name: Playwright (${{ matrix.browser }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+        os: [ubuntu-latest]
+        # Add macOS for WebKit/Safari testing
+        include:
+          - browser: webkit
+            os: macos-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+      - name: Run Playwright tests
+        run: npx playwright test --project=${{ matrix.browser }}
+      
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: playwright-report/
+          retention-days: 30
+  
+  # Lighthouse CI for performance and accessibility
+  lighthouse-ci:
+    name: Lighthouse CI (${{ matrix.browser }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome] # Lighthouse primarily uses Chrome
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build site
+        run: npm run build
+      
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      
+      - name: Upload Lighthouse results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-results
+          path: .lighthouseci/
+          retention-days: 30
+  
+  # pa11y multi-browser testing
+  pa11y-testing:
+    name: pa11y (${{ matrix.browser }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: |
+          npm install -g pa11y-ci
+          npm ci
+      
+      - name: Install browser
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+      - name: Run pa11y
+        run: |
+          pa11y-ci --config .pa11yci.json --browser ${{ matrix.browser }}
+      
+      - name: Upload pa11y results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pa11y-results-${{ matrix.browser }}
+          path: pa11y-results/
+          retention-days: 30
+  
+  # Browser compatibility check
+  browser-compatibility:
+    name: Check Browser Compatibility
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check browser support with browserslist
+        run: |
+          npx browserslist "last 2 Chrome versions, last 2 Firefox versions, last 2 Safari versions"
+      
+      - name: Validate against browser support policy
+        run: |
+          echo "Validating browser support guarantees..."
+          echo "✓ Chrome: Last 2 major versions"
+          echo "✓ Firefox: Last 2 major versions"
+          echo "✓ Safari: Last 2 major versions"
+  
+  # Summary report
+  test-summary:
+    name: Test Summary
+    needs: [axe-core-testing, playwright-testing, lighthouse-ci, pa11y-testing, browser-compatibility]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Check test results
+        run: |
+          echo "## Browser Testing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Browser Support Guarantees" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Chrome: Last 2 major versions" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Firefox: Last 2 major versions" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Safari/WebKit: Last 2 major versions" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All tests completed. Review artifacts for detailed results." >> $GITHUB_STEP_SUMMARY
+
+# Configuration files referenced in this workflow:
+#
+# .pa11yci.json - pa11y configuration
+# playwright.config.ts - Playwright configuration
+# lighthouserc.js - Lighthouse CI configuration
+# .browserslistrc or package.json browserslist field

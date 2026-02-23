@@ -11,6 +11,7 @@ We believe accessibility is a subset of quality. This project commits to **WCAG 
 | **Open A11y Issues** | [View open accessibility issues](https://github.com/mgifford/ACCESSIBILITY.md/labels/accessibility) |
 | **Automated Test Pass Rate** | Monitored via link checking and documentation validation |
 | **A11y PRs Merged (MTD)** | Tracked in [project insights](https://github.com/mgifford/ACCESSIBILITY.md/pulse) |
+| **Browser Support** | Last 2 major versions of Chrome, Firefox, Safari - [View Policy](./BROWSER_SUPPORT.md) |
 
 ## 3. Contributor Requirements (The Guardrails)
 
@@ -44,7 +45,18 @@ Our documentation includes:
 - Pre-commit hook samples ([PRE_COMMIT_ACCESSIBILITY_SAMPLE.yaml](./examples/PRE_COMMIT_ACCESSIBILITY_SAMPLE.yaml))
 - CI/CD workflow examples ([A11Y_SHIFT_LEFT_WORKFLOW.yml](./examples/A11Y_SHIFT_LEFT_WORKFLOW.yml))
 
-## 6. Assistive Technology Testing
+## 6. Browser & Assistive Technology Testing
+
+### Browser Support Guarantees
+
+This project supports the **last 2 major versions** of all major browser engines:
+- **Chrome/Chromium** (including Edge, Brave, Opera)
+- **Firefox**
+- **Safari/WebKit** (macOS and iOS)
+
+See our comprehensive [Browser Support Policy](./BROWSER_SUPPORT.md) for version details, testing requirements, and implementation guidance.
+
+### Assistive Technology Testing
 
 Contributors are encouraged to test documentation and examples with:
 

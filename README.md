@@ -66,6 +66,7 @@ This repository provides templates and guidance to help you implement `ACCESSIBI
 ### Key Files
 
 * **[ACCESSIBILITY.md](./ACCESSIBILITY.md):** This repository's own accessibility commitment and standards
+* **[BROWSER_SUPPORT.md](./BROWSER_SUPPORT.md):** Browser version support guarantees and testing requirements
 * **[AGENTS.md](./AGENTS.md):** Instructions for AI coding assistants
 * **[CONTRIBUTING.md](./CONTRIBUTING.md):** How to contribute, including accessibility accommodations
 
