@@ -61,7 +61,7 @@ title: ACCESSIBILITY.md
     <h2>Repository Structure</h2>
     <div class="prose">
       <p>This repository is organized to help you quickly find what to adopt vs. what to reference:</p>
-      <pre class="structure-code"><code class="language-plaintext">mgifford/ACCESSIBILITY.md/          (repository root)
+      <pre class="structure-code"><code class="language-plaintext">[Repository Root]
 ├── ACCESSIBILITY-template.md       ← Start here: Copy this template
 ├── AGENTS.md                       ← AI agent instructions
 │

@@ -28,7 +28,7 @@ Just as `SECURITY.md` defines how to handle vulnerabilities, **`ACCESSIBILITY.md
 This repository is organized to separate **content you adopt** from **project documentation**:
 
 ```
-mgifford/ACCESSIBILITY.md/          (repository root)
+[Repository Root]
 ├── ACCESSIBILITY-template.md       ← Start here: Copy this template
 ├── ACCESSIBILITY.md                ← Our own accessibility commitment
 ├── AGENTS.md                       ← AI agent instructions (copy/adapt)
