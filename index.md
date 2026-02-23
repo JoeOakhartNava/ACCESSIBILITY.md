@@ -118,6 +118,14 @@ title: ACCESSIBILITY.md
         <p><a href="./action-playbook.html">Practical accessibility workflow guide</a></p>
       </article>
       <article class="card">
+        <h3>Accessibility Commitment</h3>
+        <p><a href="./ACCESSIBILITY.html">ACCESSIBILITY.md - Our accessibility standards and metrics</a></p>
+      </article>
+      <article class="card">
+        <h3>Sustainability Policy</h3>
+        <p><a href="./SUSTAINABILITY.html">SUSTAINABILITY.md - Digital sustainability and AI usage</a></p>
+      </article>
+      <article class="card">
         <h3>AI Agent Instructions</h3>
         <p><a href="./AGENTS.html">AGENTS.md - AI coding assistant guidance</a></p>
       </article>
