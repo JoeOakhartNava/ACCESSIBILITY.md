@@ -252,7 +252,7 @@ if (savedTheme) {
 }
 
 function applyTheme(theme) {
-  // Set data-theme attribute; CSS handles icon visibility via [data-theme] selectors
+  // Set data-theme on root; descendant CSS selectors control icon visibility
   document.documentElement.setAttribute('data-theme', theme);
   
   // Update button label to reflect the action
