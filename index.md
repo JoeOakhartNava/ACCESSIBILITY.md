@@ -135,6 +135,10 @@ title: ACCESSIBILITY.md
         <p><a href="./examples/README.html">examples/README</a></p>
       </article>
       <article class="card">
+        <h3>Light/Dark Mode Best Practices</h3>
+        <p><a href="./examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.html">examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES</a></p>
+      </article>
+      <article class="card">
         <h3>Prompt Starter</h3>
         <p><a href="./examples/ACCESSIBILITY_PROMPT_STARTER.html">examples/ACCESSIBILITY_PROMPT_STARTER</a></p>
       </article>
