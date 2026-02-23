@@ -133,6 +133,11 @@ title: ACCESSIBILITY.md
         <h3>Contributing Guide</h3>
         <p><a href="./CONTRIBUTING.html">CONTRIBUTING.md - How to contribute to this project</a></p>
       </article>
+      <article class="card">
+        <h3>Procurement Requirements</h3>
+        <p><a href="https://github.com/CivicActions/open-practice/blob/main/open-requirements-library/accessibility.md">CivicActions Open Requirements Library</a></p>
+        <p>Section 508 compliance requirements for government contracts and RFPs</p>
+      </article>
     </div>
   </div>
 </section>
