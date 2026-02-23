@@ -123,7 +123,11 @@ It is intentionally practical: short checklists, clear ownership, and measurable
 
 ### Keep constraints explicit
 
-- Document browser and assistive technology support matrix.
+- **Document browser and assistive technology support matrix** - See [Browser Support Policy](./BROWSER_SUPPORT.md) for a comprehensive template including:
+  - Browser version support guarantees (last 2 major versions recommended)
+  - Browser + assistive technology testing combinations
+  - Automated testing requirements across browsers
+  - Known browser-specific accessibility issues
 - Focus optimization efforts where control is real and measurable.
 - Be transparent about known gaps and remediation timelines.
 
