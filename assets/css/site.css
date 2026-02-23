@@ -238,6 +238,10 @@ textarea {
   overflow-x: auto;
 }
 
+.steps-footer {
+  margin-top: 2rem;
+}
+
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;

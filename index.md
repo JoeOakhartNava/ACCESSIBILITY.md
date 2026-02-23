@@ -61,7 +61,7 @@ title: ACCESSIBILITY.md
     <h2>Repository Structure</h2>
     <div class="prose">
       <p>This repository is organized to help you quickly find what to adopt vs. what to reference:</p>
-      <pre class="structure-code"><code>ACCESSIBILITY.md/
+      <pre class="structure-code"><code class="language-plaintext">ACCESSIBILITY.md/
 ├── ACCESSIBILITY-template.md     ← Start here: Copy this template
 ├── AGENTS.md                     ← AI agent instructions
 │
@@ -215,7 +215,7 @@ title: ACCESSIBILITY.md
         <p>Update ACCESSIBILITY.md as your project evolves. Track metrics, document gaps, and maintain your commitment to accessibility.</p>
       </article>
     </div>
-    <div class="prose" style="margin-top: 2rem;">
+    <div class="prose steps-footer">
       <p><strong>For detailed instructions, see the <a href="https://github.com/mgifford/ACCESSIBILITY.md#how-to-adopt-this-in-your-project">step-by-step adoption guide</a> in the README.</strong></p>
     </div>
   </div>
