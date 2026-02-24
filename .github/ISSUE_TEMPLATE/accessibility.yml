@@ -55,15 +55,6 @@ body:
     validations:
       required: false
 
-  - type: input
-    id: element-path
-    attributes:
-      label: Element Path or Selector
-      description: CSS selector, XPath, or other way to identify the element (optional but helpful)
-      placeholder: "e.g., #APjFqb, .nav-menu > button:first-child, or //div[@role='banner']//button"
-    validations:
-      required: false
-
   - type: textarea
     id: code-snippet
     attributes:
@@ -88,25 +79,6 @@ body:
         3. Observe that...
     validations:
       required: false
-
-  - type: checkboxes
-    id: wcag-criteria
-    attributes:
-      label: Related WCAG Success Criteria
-      description: Select any that apply (if known)
-      options:
-        - label: "1.1.1 Non-text Content (Level A)"
-        - label: "1.3.1 Info and Relationships (Level A)"
-        - label: "1.4.3 Contrast (Minimum) (Level AA)"
-        - label: "2.1.1 Keyboard (Level A)"
-        - label: "2.4.1 Bypass Blocks (Level A)"
-        - label: "2.4.3 Focus Order (Level A)"
-        - label: "2.4.7 Focus Visible (Level AA)"
-        - label: "3.2.2 On Input (Level A)"
-        - label: "3.3.2 Labels or Instructions (Level A)"
-        - label: "4.1.2 Name, Role, Value (Level A)"
-        - label: "4.1.3 Status Messages (Level AA)"
-        - label: "Other (specify in description)"
 
   - type: checkboxes
     id: rule-categories
@@ -147,9 +119,7 @@ body:
     id: terms
     attributes:
       label: Submission Guidelines
-      description: Please confirm you've reviewed these items
+      description: Please confirm:
       options:
         - label: "I have searched for similar issues before submitting"
-          required: false
-        - label: "I have provided enough context for someone to understand and reproduce the issue"
           required: false
