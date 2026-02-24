@@ -2,7 +2,7 @@
 
 > **The open standard for project accessibility transparency, governance, and AI-assisted inclusion.**
 
-Just as `SECURITY.md` defines how to handle vulnerabilities, **`ACCESSIBILITY.md`** defines the inclusive state of a project. It is a human-navigable and machine-readable manifest that tracks a project’s commitment to accessibility (a11y) through metrics, guardrails, and automated enforcement.
+Just as `SECURITY.md` defines how to handle vulnerabilities, **`ACCESSIBILITY.md`** defines the inclusive state of a project. It is a human and machine-readable manifest that tracks a project’s commitment to accessibility (a11y) through metrics, guardrails, and automated enforcement.
 
 ---
 
