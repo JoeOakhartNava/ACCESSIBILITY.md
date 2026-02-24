@@ -45,6 +45,7 @@ This repository is organized to separate **content you adopt** from **project do
 │   ├── FORMS_ACCESSIBILITY_BEST_PRACTICES.md
 │   ├── KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md
 │   ├── LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md
+│   ├── MANUAL_ACCESSIBILITY_TESTING_GUIDE.md
 │   ├── MERMAID_ACCESSIBILITY_BEST_PRACTICES.md
 │   ├── AXE_RULES_COVERAGE.md                 ← Automation reference
 │   ├── SHIFT_LEFT_ACCESSIBILITY_AUTOMATION.md
@@ -99,6 +100,7 @@ An effective `ACCESSIBILITY.md` file acts as a **Living Commitment**, covering t
 * **Trusted Source Registry:** Machine-readable list of vetted accessibility references for AI retrieval and citation policies ([YAML](./examples/TRUSTED_SOURCES.yaml)), including [wai-yaml-ld](https://github.com/mgifford/wai-yaml-ld) for structured WCAG/ARIA/ATAG standards data and [CivicActions Open Requirements Library](https://github.com/CivicActions/open-practice/blob/main/open-requirements-library/accessibility.md) for procurement requirements.
 * **Link Integrity Checks:** Scheduled and PR-time validation of documentation links ([Workflow](./.github/workflows/link-check.yml)).
 * **Best Practice Reference:** Project-specific guidance for complex components like [SVGs](./examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md), [Mermaid diagrams](./examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md), [keyboard interactions](./examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md), [light/dark modes](./examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md), and [forms](./examples/FORMS_ACCESSIBILITY_BEST_PRACTICES.md).
+* **Manual Testing Guide:** Comprehensive procedures for keyboard-only and screen reader testing, with step-by-step workflows for validating accessibility beyond automated tools ([Guide](./examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md)).
 
 ---
 
@@ -196,6 +198,7 @@ Copy relevant guides to your project's documentation:
 - **Keyboard navigation**: [examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md](./examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md)
 - **Light/Dark mode**: [examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md](./examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md)
 - **Mermaid diagrams**: [examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md](./examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md)
+- **Manual testing**: [examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md](./examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md)
 
 ### Step 6: Reference Trusted Sources
 
