@@ -44,6 +44,7 @@ This repository is organized to separate **content you adopt** from **project do
 │   ├── SVG_ACCESSIBILITY_BEST_PRACTICES.md   ← Component guides
 │   ├── FORMS_ACCESSIBILITY_BEST_PRACTICES.md
 │   ├── KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md
+│   ├── LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md
 │   ├── MERMAID_ACCESSIBILITY_BEST_PRACTICES.md
 │   ├── AXE_RULES_COVERAGE.md                 ← Automation reference
 │   ├── SHIFT_LEFT_ACCESSIBILITY_AUTOMATION.md
@@ -97,7 +98,7 @@ An effective `ACCESSIBILITY.md` file acts as a **Living Commitment**, covering t
 * **Copy-Ready Samples:** Starter files for CI and local guardrails ([Workflow](./examples/A11Y_SHIFT_LEFT_WORKFLOW.yml), [pre-commit config](./examples/PRE_COMMIT_ACCESSIBILITY_SAMPLE.yaml)).
 * **Trusted Source Registry:** Machine-readable list of vetted accessibility references for AI retrieval and citation policies ([YAML](./examples/TRUSTED_SOURCES.yaml)), including [wai-yaml-ld](https://github.com/mgifford/wai-yaml-ld) for structured WCAG/ARIA/ATAG standards data and [CivicActions Open Requirements Library](https://github.com/CivicActions/open-practice/blob/main/open-requirements-library/accessibility.md) for procurement requirements.
 * **Link Integrity Checks:** Scheduled and PR-time validation of documentation links ([Workflow](./.github/workflows/link-check.yml)).
-* **Best Practice Reference:** Project-specific guidance for complex components like [SVGs](./examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md), [Mermaid diagrams](./examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md), [keyboard interactions](./examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md), and [forms](./examples/FORMS_ACCESSIBILITY_BEST_PRACTICES.md).
+* **Best Practice Reference:** Project-specific guidance for complex components like [SVGs](./examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md), [Mermaid diagrams](./examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md), [keyboard interactions](./examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md), [light/dark modes](./examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md), and [forms](./examples/FORMS_ACCESSIBILITY_BEST_PRACTICES.md).
 
 ---
 
@@ -165,7 +166,7 @@ Help your AI tools (GitHub Copilot, Cursor, Claude, etc.) respect accessibility 
 
 **What AI agents get:**
 - WCAG 2.2 AA compliance requirements
-- Component-specific best practices (forms, SVGs, diagrams, keyboard)
+- Component-specific best practices (forms, SVGs, diagrams, keyboard, light/dark modes)
 - Asset optimization guidelines
 - Testing requirements
 
@@ -193,6 +194,7 @@ Copy relevant guides to your project's documentation:
 - **Forms**: [examples/FORMS_ACCESSIBILITY_BEST_PRACTICES.md](./examples/FORMS_ACCESSIBILITY_BEST_PRACTICES.md)
 - **SVGs**: [examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md](./examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md)
 - **Keyboard navigation**: [examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md](./examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md)
+- **Light/Dark mode**: [examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md](./examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md)
 - **Mermaid diagrams**: [examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md](./examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md)
 
 ### Step 6: Reference Trusted Sources
