@@ -231,6 +231,44 @@ def check_content_freshness(url: str) -> Optional[datetime]:
         return None
 
 
+def suggest_topic_tags(source: Dict[str, Any]) -> List[str]:
+    """
+    Suggest topic tags based on best_for and description fields.
+    
+    Returns a list of normalized topic tags.
+    """
+    # Common accessibility topic keywords
+    topic_keywords = {
+        'wcag': ['wcag', 'guideline', 'standard'],
+        'aria': ['aria', 'wai-aria', 'screen reader'],
+        'forms': ['form', 'input', 'validation'],
+        'color-contrast': ['contrast', 'color'],
+        'keyboard': ['keyboard', 'navigation', 'focus'],
+        'screen-readers': ['screen reader', 'nvda', 'jaws', 'voiceover'],
+        'testing': ['test', 'testing', 'audit', 'scan'],
+        'design': ['design', 'ux', 'ui'],
+        'development': ['code', 'development', 'programming'],
+        'inclusive-design': ['inclusive', 'universal design'],
+        'captions': ['caption', 'subtitle', 'video'],
+        'audio-description': ['audio description', 'described video'],
+        'pdf': ['pdf', 'document'],
+        'mobile': ['mobile', 'ios', 'android'],
+        'web-standards': ['html', 'css', 'javascript', 'w3c'],
+        'policy': ['policy', 'legal', 'compliance', 'regulation'],
+        'training': ['training', 'education', 'learning', 'course'],
+    }
+    
+    # Combine best_for and description for analysis
+    text = f"{source.get('best_for', '')} {source.get('description', '')}".lower()
+    
+    suggested_tags = []
+    for tag, keywords in topic_keywords.items():
+        if any(keyword in text for keyword in keywords):
+            suggested_tags.append(tag)
+    
+    return suggested_tags[:10]  # Limit to 10 tags
+
+
 def enrich_metadata(sources: List[Dict[str, Any]], full_scan: bool = False) -> None:
     """
     Enrich metadata for sources with missing information.
@@ -270,6 +308,13 @@ def enrich_metadata(sources: List[Dict[str, Any]], full_scan: bool = False) -> N
         if source.get('last_reviewed') is None or full_scan:
             source['last_reviewed'] = today
             print(f"  Updated last_reviewed: {today}")
+        
+        # Suggest topic_tags during full scan if empty or missing
+        if full_scan and (not source.get('topic_tags') or len(source.get('topic_tags', [])) == 0):
+            suggested_tags = suggest_topic_tags(source)
+            if suggested_tags:
+                source['topic_tags'] = suggested_tags
+                print(f"  Suggested topic_tags: {', '.join(suggested_tags)}")
         
         # Check content freshness for active sources
         if status == 'active':
@@ -322,8 +367,24 @@ def validate_yaml_structure(sources: List[Dict[str, Any]]) -> List[str]:
     errors = []
     required_fields = ['id', 'domain', 'url', 'full_url', 'best_for', 'description', 'status']
     
+    # Track for duplicate detection
+    seen_ids = set()
+    seen_urls = {}
+    
     for i, source in enumerate(sources):
         source_id = source.get('id', f'source_{i}')
+        
+        # Check for duplicate IDs
+        if source_id in seen_ids:
+            errors.append(f"{source_id}: Duplicate ID found")
+        seen_ids.add(source_id)
+        
+        # Check for duplicate URLs
+        full_url = source.get('full_url', '')
+        if full_url and full_url in seen_urls:
+            errors.append(f"{source_id}: Duplicate URL '{full_url}' (also in {seen_urls[full_url]})")
+        if full_url:
+            seen_urls[full_url] = source_id
         
         # Check required fields
         for field in required_fields:
