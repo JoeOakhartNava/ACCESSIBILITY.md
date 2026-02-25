@@ -78,6 +78,41 @@ If you test with assistive technologies, please include:
 - The browser and operating system used
 - Specific feedback about what worked well or what presented barriers
 
+### Manual accessibility testing guidance
+
+**For detailed manual testing procedures, see [Manual Accessibility Testing Guide](examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md).**
+
+This comprehensive guide provides:
+- Step-by-step keyboard-only testing procedures
+- Screen reader testing workflows
+- Component-specific testing checklists
+- Getting started resources for new testers
+- Issue reporting templates
+
+**Quick testing approaches:**
+
+**30-Minute Keyboard Test** - Test any page or component:
+1. Tab from start to end - verify focus is visible and in logical order
+2. Activate all interactive elements (Enter for links, Space/Enter for buttons)
+3. Test any forms (fill, submit, validate errors)
+4. Test any modals/dialogs (open, interact, close, verify focus returns)
+5. Check for keyboard traps (can you Tab away from everything?)
+
+**30-Minute Screen Reader Test** - Test with NVDA, JAWS, or VoiceOver:
+1. Navigate by headings (H key) - verify logical structure
+2. Navigate by landmarks (D key) - verify page regions
+3. Navigate by form fields (F key) - verify labels are clear
+4. Read page content continuously - verify reading order
+5. Test interactive elements - verify announcements are clear
+
+**When to test manually:**
+- Before each release (test critical user flows)
+- After UI changes (test affected components)
+- For new features (test complete workflows)
+- When automated tests pass (validate actual user experience)
+
+**We especially encourage testing from people with disabilities**, as lived experience is essential for identifying real-world barriers that automated tools miss.
+
 ## Need help?
 
 If you are unsure how to contribute, open an issue with your idea and we can help shape it into a change proposal.
