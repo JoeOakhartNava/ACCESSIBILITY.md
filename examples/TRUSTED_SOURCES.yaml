@@ -2644,7 +2644,7 @@ sources:
   - rfp
   - wcag
   - contracting
-  jurisdiction: us
+  jurisdiction: US
   wcag_version:
   - '2.2'
   last_reviewed: '2026-02-23'
