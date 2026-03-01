@@ -144,6 +144,11 @@ title: ACCESSIBILITY.md
         <p><a href="./examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.html">examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES</a></p>
       </article>
       <article class="card">
+        <h3>User Personalization Best Practices</h3>
+        <p><a href="./examples/USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES.html">examples/USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES</a></p>
+        <p>User preference controls, CSS media queries, and avoiding accessibility overlays</p>
+      </article>
+      <article class="card">
         <h3>Manual Accessibility Testing Guide</h3>
         <p><a href="./examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.html">examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE</a></p>
       </article>
@@ -224,7 +229,7 @@ title: ACCESSIBILITY.md
       <article class="step">
         <h3>5. Copy Component Guides</h3>
         <p>
-          Add relevant best practice guides for forms, SVGs, keyboard navigation, and diagrams from the examples directory.
+          Add relevant best practice guides for forms, SVGs, keyboard navigation, light/dark mode, user personalization, and diagrams from the examples directory.
         </p>
       </article>
       <article class="step">
