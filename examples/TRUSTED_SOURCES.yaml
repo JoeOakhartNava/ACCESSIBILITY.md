@@ -2040,3 +2040,129 @@ sources:
     owner: null
     license: null
     status: "active"
+  - id: overlayfactsheet
+    domain: "Overlay Fact Sheet"
+    url: "overlayfactsheet.com"
+    full_url: "https://overlayfactsheet.com/en/"
+    best_for: "accessibility overlays, overlay problems, automated accessibility tools"
+    description: "Comprehensive documentation explaining why accessibility overlays should not be used as a substitute for proper accessible design. Signed by over 800 accessibility professionals. Essential reading on the limitations and problems with overlay widgets that claim to automatically fix accessibility issues."
+    authority_level: "to_review"
+    topic_tags: ["overlays", "automation", "remediation", "widgets"]
+    jurisdiction: "global"
+    wcag_version: ["2.0", "2.1", "2.2"]
+    last_reviewed: null
+    owner: "Karl Groves and overlay experts community"
+    license: null
+    status: "active"
+  - id: fluid-infusion-preferences
+    domain: "Fluid Infusion Preferences Framework"
+    url: "docs.fluidproject.org/infusion/development/PreferencesFramework"
+    full_url: "https://docs.fluidproject.org/infusion/development/PreferencesFramework"
+    best_for: "user preferences, personalization, accessibility customization, inclusive design"
+    description: "Reference implementation of user preference framework that allows users to customize text size, line spacing, font, contrast options, table of contents, and enhanced inputs. Demonstrates best practices for legitimate user personalization without claiming to fix accessibility issues."
+    authority_level: "to_review"
+    topic_tags: ["personalization", "preferences", "user-control", "customization"]
+    jurisdiction: "global"
+    wcag_version: ["2.0", "2.1", "2.2"]
+    last_reviewed: null
+    owner: "Fluid Project (IDRC)"
+    license: "BSD-3-Clause"
+    status: "active"
+  - id: paypal-skipto
+    domain: "PayPal SkipTo"
+    url: "paypal.github.io/skipto"
+    full_url: "https://paypal.github.io/skipto/"
+    best_for: "skip navigation, landmarks menu, heading navigation, keyboard accessibility"
+    description: "Keyboard-accessible menu that lists all landmarks and headings on a page, making it easy for users to jump to different sections. Fills the gap where browsers don't provide easy page structure navigation. Triggered by keyboard shortcut (Alt+0 or Option+0)."
+    authority_level: "to_review"
+    topic_tags: ["navigation", "skip-links", "keyboard", "landmarks", "headings"]
+    jurisdiction: "global"
+    wcag_version: ["2.0", "2.1", "2.2"]
+    last_reviewed: null
+    owner: "PayPal Accessibility Team"
+    license: "Apache-2.0"
+    status: "active"
+  - id: elevenways-media-queries
+    domain: "Eleven Ways - Media Queries Article"
+    url: "elevenways.be/en/articles/a-more-inclusive-website-thanks-to-media-queries"
+    full_url: "https://elevenways.be/en/articles/a-more-inclusive-website-thanks-to-media-queries"
+    best_for: "CSS media queries, user preferences, inclusive design, prefers-reduced-motion"
+    description: "Comprehensive guide on using CSS media queries to create more inclusive websites by respecting user preferences for motion, color scheme, contrast, and transparency."
+    authority_level: "to_review"
+    topic_tags: ["css", "media-queries", "user-preferences", "motion", "contrast"]
+    jurisdiction: "global"
+    wcag_version: ["2.1", "2.2"]
+    last_reviewed: null
+    owner: "Eleven Ways"
+    license: null
+    status: "active"
+  - id: dockyard-media-queries
+    domain: "DockYard - CSS Media Queries Accessibility"
+    url: "dockyard.com/blog/2024/01/16/css-media-queries-accessibility-optimize-digital-product-design"
+    full_url: "https://dockyard.com/blog/2024/01/16/css-media-queries-accessibility-optimize-digital-product-design"
+    best_for: "CSS media queries, accessibility optimization, responsive design, user preferences"
+    description: "Guide on using CSS media queries to optimize digital product design for accessibility, covering prefers-reduced-motion, prefers-color-scheme, prefers-contrast, and other user preference queries."
+    authority_level: "to_review"
+    topic_tags: ["css", "media-queries", "responsive-design", "user-preferences"]
+    jurisdiction: "global"
+    wcag_version: ["2.1", "2.2"]
+    last_reviewed: null
+    owner: "DockYard"
+    license: null
+    status: "active"
+  - id: pmc-dyslexia-fonts
+    domain: "PMC - Typography and Dyslexia"
+    url: "pmc.ncbi.nlm.nih.gov/articles/PMC5934461"
+    full_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5934461/"
+    best_for: "dyslexia fonts research, typography, reading accessibility"
+    description: "Research article examining the effectiveness of typeface on reading performance for readers with dyslexia. Provides scientific context on dyslexia-friendly font claims."
+    authority_level: "to_review"
+    topic_tags: ["research", "dyslexia", "typography", "fonts", "readability"]
+    jurisdiction: "global"
+    wcag_version: []
+    last_reviewed: null
+    owner: "PubMed Central / NIH"
+    license: "public-domain"
+    status: "active"
+  - id: heidi-gregory-dyslexia-fonts
+    domain: "Heidi Gregory - Dyslexia Font Myth"
+    url: "heidigregoryparentadvocacy.com/post/the-dyslexia-friendly-font-myth"
+    full_url: "https://www.heidigregoryparentadvocacy.com/post/the-dyslexia-friendly-font-myth"
+    best_for: "dyslexia fonts, evidence-based practices, typography myths"
+    description: "Parent advocate and educator perspective on dyslexia-friendly fonts, examining research evidence and practical considerations for font selection in educational settings."
+    authority_level: "to_review"
+    topic_tags: ["dyslexia", "typography", "fonts", "education", "evidence-based"]
+    jurisdiction: "global"
+    wcag_version: []
+    last_reviewed: null
+    owner: "Heidi Gregory"
+    license: null
+    status: "active"
+  - id: edutopia-dyslexia-fonts
+    domain: "Edutopia - Do Dyslexia Fonts Actually Work"
+    url: "edutopia.org/article/do-dyslexia-fonts-actually-work"
+    full_url: "https://www.edutopia.org/article/do-dyslexia-fonts-actually-work"
+    best_for: "dyslexia fonts, education research, evidence-based practices"
+    description: "Educational resource examining research on whether specialized dyslexia fonts actually improve reading for students with dyslexia, providing balanced perspective on font choice."
+    authority_level: "to_review"
+    topic_tags: ["dyslexia", "typography", "fonts", "education", "research"]
+    jurisdiction: "global"
+    wcag_version: []
+    last_reviewed: null
+    owner: "George Lucas Educational Foundation"
+    license: null
+    status: "active"
+  - id: web-almanac-2024-accessibility
+    domain: "Web Almanac 2024 - Accessibility Chapter"
+    url: "almanac.httparchive.org/en/2024/accessibility"
+    full_url: "https://almanac.httparchive.org/en/2024/accessibility"
+    best_for: "accessibility trends, web statistics, user personalization, overlay analysis"
+    description: "Annual report analyzing the state of web accessibility based on HTTP Archive data. Includes sections on user personalization widgets, overlay remediation, and current accessibility practices across millions of websites."
+    authority_level: "to_review"
+    topic_tags: ["research", "statistics", "trends", "personalization", "overlays"]
+    jurisdiction: "global"
+    wcag_version: ["2.0", "2.1", "2.2"]
+    last_reviewed: null
+    owner: "HTTP Archive / W3C"
+    license: "Apache-2.0"
+    status: "active"

@@ -555,6 +555,10 @@ For AI systems and automated tooling, see [wai-yaml-ld](https://github.com/mgiff
 - [CSS Specifications Index (YAML)](https://github.com/mgifford/wai-yaml-ld/blob/main/kitty-specs/001-wai-standards-yaml-ld-ingestion/research/css-specifications-index.yaml) - CSS specs including media queries and color modules
 - [Standards Link Graph (YAML)](https://github.com/mgifford/wai-yaml-ld/blob/main/kitty-specs/001-wai-standards-yaml-ld-ingestion/research/standards-link-graph.yaml) - Relationships across WCAG/CSS/HTML standards
 
+### Related Guides
+
+- [User Personalization and Accessibility Best Practices](./USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES.md) - Comprehensive guide on implementing user preference controls, CSS media queries for accessibility, and avoiding accessibility overlays
+
 ### Additional Reading
 
 - [Inclusive Dark Mode: Designing Accessible Dark Themes](https://www.smashingmagazine.com/2025/04/inclusive-dark-mode-designing-accessible-dark-themes/)
