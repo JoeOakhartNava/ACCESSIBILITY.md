@@ -327,20 +327,61 @@ See [Light/Dark Mode Accessibility Best Practices](./LIGHT_DARK_MODE_ACCESSIBILI
 
 ## 6. Complete Preference Framework: Fluid Infusion
 
-The **Fluid Project's Preferences Framework** demonstrates best-in-class user personalization:
+The **Fluid Project** is an open-source community developing inclusive design approaches and tools. Their **Preferences Framework** (also known as **UI Options**) demonstrates best-in-class user personalization and serves as a reference implementation for accessibility-focused customization.
 
-**Features:**
-- Text size adjustment
+### About the Fluid Project
+
+The [Fluid Project](https://fluidproject.org/) is housed at the [Inclusive Design Research Centre (IDRC)](https://idrc.ocadu.ca/) at OCAD University in Toronto. The project focuses on creating flexible, customizable, and accessible user experiences through open-source software development and research.
+
+**Key Fluid Project GitHub Organization:** [https://github.com/fluid-project](https://github.com/fluid-project)
+
+### Fluid Infusion and UI Options
+
+**Fluid Infusion** is a JavaScript framework for building accessible web applications. Its **Preferences Framework (UI Options)** component provides a comprehensive user preference system that can be integrated into any website.
+
+**Core Infusion Projects:**
+- [Fluid Infusion](https://github.com/fluid-project/infusion) - Main framework and preferences system
+- [UI Options](https://github.com/fluid-project/uio) - Standalone preferences component
+- [Fluid Skinning System (FSS)](https://github.com/fluid-project/fluid-skinning-system) - Accessible CSS framework that works with preferences
+- [Infusion Documentation](https://github.com/fluid-project/infusion-docs) - Comprehensive documentation and guides
+
+### UI Options Features
+
+**Text Customization:**
+- Text size adjustment (5 levels)
 - Line spacing controls
-- Font family selection
-- Contrast/theme options
+- Font family selection (including OpenDyslexic)
+- Letter spacing adjustment
+- Word spacing adjustment
+
+**Visual Customization:**
+- High contrast themes (multiple options)
+- Dark mode / light mode
+- Background color options
+- Custom color schemes
+
+**Navigation Enhancement:**
 - Table of contents generation
+- Keyboard shortcuts
+- Enhanced focus indicators
+
+**Input Enhancement:**
 - Enhanced form inputs
 - Self-voicing (text-to-speech)
-- All preferences stored in cookies
+- Highlight selection
 
-**Key resource:**
+**Persistence:**
+- All preferences stored in cookies
+- Preferences persist across sessions
+- Works across multiple pages
+
+### Key Resources
+
 - [Fluid Infusion Preferences Framework Documentation](https://docs.fluidproject.org/infusion/development/PreferencesFramework)
+- [UI Options Demo](https://build.fluidproject.org/infusion/demos/prefsFramework/)
+- [Fluid Project GitHub Organization](https://github.com/fluid-project)
+- [Fluid Project Website](https://fluidproject.org/)
+- [Inclusive Design Research Centre](https://idrc.ocadu.ca/)
 
 **Implementation approach:**
 
