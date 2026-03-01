@@ -49,7 +49,7 @@ There is ONE acceptable use case for overlay-like technology:
 4. Users are informed it's a stopgap measure
 5. Active work continues toward proper accessible implementation
 
-As noted in the [Web Almanac 2024 Accessibility Chapter](https://almanac.httparchive.org/en/2024/accessibility#user-personalization-widgets-and-overlay-remediation):
+As noted in the [Web Almanac 2024 Accessibility Chapter](https://almanac.httparchive.org/en/2024/accessibility#user-personalization-widgets-and-overlay-remediation) (User Personalization Widgets and Overlay Remediation section):
 
 > "Custom remediation for legacy sites can be fine when implemented thoughtfully as a bridge to proper accessibility."
 
