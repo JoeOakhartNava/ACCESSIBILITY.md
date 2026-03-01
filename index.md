@@ -229,7 +229,7 @@ title: ACCESSIBILITY.md
       <article class="step">
         <h3>5. Copy Component Guides</h3>
         <p>
-          Add relevant best practice guides for forms, SVGs, keyboard navigation, and diagrams from the examples directory.
+          Add relevant best practice guides for forms, SVGs, keyboard navigation, light/dark mode, user personalization, and diagrams from the examples directory.
         </p>
       </article>
       <article class="step">
