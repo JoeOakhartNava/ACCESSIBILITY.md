@@ -414,14 +414,13 @@ For AI systems and automated tooling, see [wai-yaml-ld](https://github.com/mgiff
 - [Able Player](https://ableplayer.github.io/ableplayer/) - Fully accessible HTML5 media player (recommended)
 - [3Play Media](https://www.3playmedia.com/) - Professional captioning and transcription services
 - [Described and Captioned Media Program (DCMP)](https://dcmp.org/) - Resources and accessible educational media
-- [Access Media](https://access-media.org/) - Tools and resources for accessible digital media
 
 ### Additional Reading
 
-- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/articles/captions/)
-- [Deque: Accessible Media Players](https://www.deque.com/blog/accessible-media-players/)
+- [WebAIM Articles](https://webaim.org/articles/) - Comprehensive accessibility articles including captions and transcripts guidance
 - [National Association of the Deaf: Captioning Standards](https://nad.org/)
-- [BBC: Subtitle Guidelines](https://bbc.github.io/subtitle-guidelines/)
+- [BBC Accessibility Guidelines](https://www.bbc.co.uk/accessibility/forproducts/guides/) - BBC accessibility patterns for media and products
+- [Deque University](https://dequeuniversity.com/) - Accessibility training and resources including media accessibility
 
 ---
 
