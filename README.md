@@ -209,6 +209,7 @@ Copy relevant guides to your project's documentation:
 - **User Personalization**: [examples/USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES.md](./examples/USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES.md)
 - **Mermaid diagrams**: [examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md](./examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md)
 - **Manual testing**: [examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md](./examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md)
+- **Progressive enhancement**: [examples/PROGRESSIVE_ENHANCEMENT_BEST_PRACTICES.md](./examples/PROGRESSIVE_ENHANCEMENT_BEST_PRACTICES.md)
 
 ### Step 6: Reference Trusted Sources
 
