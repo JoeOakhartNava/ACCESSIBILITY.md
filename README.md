@@ -6,6 +6,19 @@ Just as `SECURITY.md` defines how to handle vulnerabilities, **`ACCESSIBILITY.md
 
 ---
 
+> [!WARNING]
+> **⚠️ Experimental — Validate Before Use**
+>
+> This project is **still experimental**. Most of the content on this site was generated with AI assistance and **has not yet been fully validated in real-world conditions**. Impacts may vary significantly depending on where and how it is implemented.
+>
+> **Do not expect that simply adding an `ACCESSIBILITY.md` file will make your digital tool accessible.** What it _can_ do is signal to developers that accessibility matters, and make explicit what your development processes are and how they affect accessibility.
+>
+> People with direct experience conducting studies on the accessibility impact and cost implications of AI-assisted workflows should be involved before drawing conclusions from this work.
+>
+> **Please share your experience** — positive or negative — in the [issue queue](https://github.com/mgifford/ACCESSIBILITY.md/issues). Include links and references so claims can be examined and discussed by the community.
+
+---
+
 ## 🚀 Quick Start
 
 **New to this project?** Here's what you need:

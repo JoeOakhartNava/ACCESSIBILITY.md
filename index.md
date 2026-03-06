@@ -39,6 +39,31 @@ title: ACCESSIBILITY.md
   </div>
 </header>
 
+<section class="notice-experimental" aria-label="Experimental status notice">
+  <div class="wrap">
+    <p class="notice-heading">⚠️ Experimental — Validate Before Use</p>
+    <p>
+      This project is <strong>still experimental</strong>. Most of the content on this site was generated with AI assistance
+      and <strong>has not yet been fully validated in real-world conditions</strong>.
+      Impacts may vary significantly depending on where and how it is implemented.
+    </p>
+    <p>
+      <strong>Do not expect that simply adding an <code>ACCESSIBILITY.md</code> file will make your digital tool accessible.</strong>
+      What it <em>can</em> do is signal to developers that accessibility matters, and make explicit what your development
+      processes are and how they affect accessibility.
+    </p>
+    <p>
+      People with direct experience conducting studies on the accessibility impact and cost implications of
+      AI-assisted workflows should be involved before drawing conclusions from this work.
+    </p>
+    <p>
+      <strong>Please share your experience</strong> — positive or negative — in the
+      <a href="https://github.com/mgifford/ACCESSIBILITY.md/issues">issue queue</a>.
+      Include links and references so claims can be examined and discussed by the community.
+    </p>
+  </div>
+</section>
+
 <section id="why">
   <div class="wrap">
     <h2>Why ACCESSIBILITY.md?</h2>
