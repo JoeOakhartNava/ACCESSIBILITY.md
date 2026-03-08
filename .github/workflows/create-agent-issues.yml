@@ -1,0 +1,106 @@
+name: Create Agent Issues
+
+# Creates GitHub Issues from the structured proposals in .github/issue-proposals/.
+# Inspired by the pattern used in mgifford/open-scans#95:
+# https://github.com/mgifford/open-scans/pull/95
+#
+# This workflow runs automatically when changes are pushed to the main branch,
+# and can also be triggered manually via the Actions tab.
+# Idempotency checks prevent duplicate issues from being created on re-runs.
+#
+# Prerequisites: The 'enhancement' label must exist (created by default on new
+# GitHub repositories). The workflow will create 'ai-agent', 'ci-cd', and
+# 'documentation' labels automatically if they are missing.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  create-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Ensure required labels exist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [
+              { name: 'ai-agent',       color: '0052cc', description: 'AI agent workflow or tooling' },
+              { name: 'ci-cd',          color: 'e4e669', description: 'CI/CD pipeline related' },
+              { name: 'documentation',  color: '0075ca', description: 'Improvements or additions to documentation' },
+            ];
+            for (const label of labels) {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: label.name,
+                });
+              } catch (e) {
+                if (e.status === 404) {
+                  await github.rest.issues.createLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    ...label,
+                  });
+                  console.log(`Created label: ${label.name}`);
+                } else {
+                  throw e;
+                }
+              }
+            }
+
+      - name: Create issues from proposals
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            const proposals = [
+              {
+                file: '.github/issue-proposals/001-copilot-agent-accessibility-md-bootstrap.md',
+                title: 'Add example: GitHub Copilot coding agent to bootstrap ACCESSIBILITY.md for new projects',
+                labels: ['enhancement', 'ai-agent', 'documentation'],
+              },
+              {
+                file: '.github/issue-proposals/002-copilot-agent-remediation-workflow.md',
+                title: 'Add example: GitHub Copilot agent workflow for automated accessibility issue remediation',
+                labels: ['enhancement', 'ai-agent', 'ci-cd'],
+              },
+              {
+                file: '.github/issue-proposals/003-agents-md-copilot-agent-mode-guide.md',
+                title: 'Add guide: Structuring AGENTS.md for GitHub Copilot agent mode (WCAG-grounded code generation)',
+                labels: ['enhancement', 'ai-agent', 'documentation'],
+              },
+            ];
+
+            const stripFrontmatter = (raw) => raw.replace(/^---\n[\s\S]*?\n---\n/, '');
+
+            for (const [i, proposal] of proposals.entries()) {
+              const search = await github.rest.search.issuesAndPullRequests({
+                q: `repo:${context.repo.owner}/${context.repo.repo} is:issue in:title "${proposal.title}"`,
+              });
+              if (search.data.total_count > 0) {
+                console.log(`Issue ${i + 1} already exists, skipping`);
+              } else {
+                const raw = fs.readFileSync(proposal.file, 'utf8');
+                const body = stripFrontmatter(raw);
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: proposal.title,
+                  labels: proposal.labels,
+                  body,
+                });
+                console.log(`Issue ${i + 1} created successfully`);
+              }
+            }
