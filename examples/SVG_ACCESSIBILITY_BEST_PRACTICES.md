@@ -181,6 +181,15 @@ Validate SVG accessibility by:
 
 ---
 
+## Related Guides
+
+SVG accessibility is closely connected to these guides in this project:
+
+- [Charts and Graphs Accessibility Best Practices](CHARTS_GRAPHS_ACCESSIBILITY_BEST_PRACTICES.md) — Applies SVG accessibility patterns to data visualizations. See especially the SVG-based charts section for `<title>`, `<desc>`, `aria-labelledby`, and `role="img"` usage in chart contexts.
+- [Mermaid Accessibility Best Practices](MERMAID_ACCESSIBILITY_BEST_PRACTICES.md) — Covers authoring of Mermaid diagrams whose SVG output must satisfy the same accessibility requirements documented here.
+
+---
+
 ## References
 
 ### Machine-Readable Standards

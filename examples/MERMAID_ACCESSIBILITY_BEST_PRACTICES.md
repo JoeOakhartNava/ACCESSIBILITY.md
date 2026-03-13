@@ -271,6 +271,15 @@ Document these limitations in diagram metadata or UI:
 
 ---
 
+## Related Guides
+
+Mermaid diagrams are closely related to these guides in this project:
+
+- [SVG Accessibility Best Practices](SVG_ACCESSIBILITY_BEST_PRACTICES.md) — Mermaid diagrams are exported as SVG. The SVG accessibility rules for `<title>`, `<desc>`, `role="img"`, `aria-labelledby`, forced-colors, and ID preservation all apply to Mermaid output.
+- [Charts and Graphs Accessibility Best Practices](CHARTS_GRAPHS_ACCESSIBILITY_BEST_PRACTICES.md) — Mermaid is commonly used to create flowcharts and sequence diagrams; the charts guide covers text alternatives, data table fallbacks, color encoding, and interactive accessibility requirements that apply when Mermaid diagrams are used as data visualizations.
+
+---
+
 ## References
 
 ### W3C Specifications
