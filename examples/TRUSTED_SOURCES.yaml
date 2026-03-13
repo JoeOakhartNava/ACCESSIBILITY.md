@@ -3114,3 +3114,58 @@ sources:
   owner: CSS-Tricks / DigitalOcean
   license: unknown
   status: active
+- id: ta11y-org
+  domain: ta11y.org
+  url: ta11y.org
+  full_url: https://ta11y.org/
+  best_for: accessibility testing, automated testing, WCAG compliance, accessibility scoring
+  description: Accessibility testing and scoring tool that helps developers and teams evaluate and improve the accessibility of web content against WCAG standards.
+  authority_level: to_review
+  topic_tags:
+  - testing
+  - wcag
+  - accessibility
+  - automation
+  jurisdiction: global
+  wcag_version:
+  - '2.1'
+  - '2.2'
+  last_reviewed: null
+  owner: null
+  license: unknown
+  status: active
+- id: whollyaccessible-org
+  domain: whollyaccessible.org
+  url: whollyaccessible.org
+  full_url: https://whollyaccessible.org/
+  best_for: accessibility guidance, inclusive design, disability inclusion, web accessibility best practices
+  description: Resource site providing accessibility guidance and best practices for creating inclusive digital experiences.
+  authority_level: to_review
+  topic_tags:
+  - wcag
+  - accessibility
+  - inclusive-design
+  jurisdiction: global
+  wcag_version: []
+  last_reviewed: null
+  owner: null
+  license: unknown
+  status: active
+- id: accessiblecommunity-org
+  domain: accessiblecommunity.org
+  url: accessiblecommunity.org
+  full_url: https://accessiblecommunity.org/
+  best_for: community accessibility, disability inclusion, accessible events, grassroots accessibility
+  description: Organization dedicated to helping communities become more accessible and inclusive for people with disabilities through practical resources and guidance.
+  authority_level: to_review
+  topic_tags:
+  - accessibility
+  - inclusive-design
+  - community
+  - disability
+  jurisdiction: global
+  wcag_version: []
+  last_reviewed: null
+  owner: Accessible Community
+  license: unknown
+  status: active
