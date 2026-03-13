@@ -520,7 +520,16 @@ A chart or graph is complete only when:
 
 ---
 
-## 15. Further Resources
+## 15. Related Guides
+
+Charts and graphs are closely related to these guides in this project:
+
+- [SVG Accessibility Best Practices](SVG_ACCESSIBILITY_BEST_PRACTICES.md) — Covers semantic markup, ARIA patterns, and optimization rules that apply directly to SVG-based charts. See especially sections on `<title>`, `<desc>`, `role="img"`, and forced-colors support.
+- [Mermaid Accessibility Best Practices](MERMAID_ACCESSIBILITY_BEST_PRACTICES.md) — Covers accessible authoring of Mermaid diagrams (flowcharts, sequence diagrams, etc.) which are exported as SVG and must meet the same accessibility requirements as any SVG chart.
+
+---
+
+## 16. Further Resources
 
 - [Harvard University IT: Data Visualization, Charts and Graphs Accessibility](https://accessibility.huit.harvard.edu/data-viz-charts-graphs)
 - [A11y Collective: Accessible Charts](https://www.a11y-collective.com/blog/accessible-charts/)
