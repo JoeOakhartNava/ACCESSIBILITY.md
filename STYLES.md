@@ -1,4 +1,4 @@
-# STYLE.md: Unified design and content standards
+# STYLES.md: Unified design and content standards
 
 ---
 
