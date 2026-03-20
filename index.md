@@ -235,6 +235,12 @@ title: ACCESSIBILITY.md
         <h3><a href="./examples/OPQUAST_DIGITAL_QUALITY_BEST_PRACTICES.html">Opquast Digital Quality Best Practices</a></h3>
         <p>245 rules across 14 categories covering accessibility, security, performance, privacy, ecodesign, and web quality — based on the <a href="https://checklists.opquast.com/en/digital-quality/">Opquast Digital Quality Checklist</a></p>
       </article>
+      <a class="card" href="./examples/PRINT_ACCESSIBILITY_BEST_PRACTICES.html">
+        <article>
+          <h3>Print-Friendly Style Sheets Best Practices</h3>
+          <p>CSS print media queries, page break control, link URL disclosure, typography for paper, and WCAG guidance for accessible printed documents</p>
+        </article>
+      </a>
       <a class="card" href="./examples/PROGRESSIVE_ENHANCEMENT_BEST_PRACTICES.html">
         <article>
           <h3>Progressive Enhancement Best Practices</h3>

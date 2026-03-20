@@ -3277,3 +3277,100 @@ sources:
   owner: J.P. Morgan
   license: Apache-2.0
   status: active
+- id: piccalilli
+  domain: Piccalilli
+  url: piccalil.li
+  full_url: https://piccalil.li
+  best_for: CSS best practices, print CSS, progressive enhancement, accessibility tutorials
+  description: Andy Bell's blog covering modern CSS techniques, progressive enhancement, and accessibility, including in-depth print CSS guidance.
+  authority_level: established
+  topic_tags:
+  - css
+  - print
+  - progressive-enhancement
+  - accessibility
+  - tutorial
+  jurisdiction: global
+  wcag_version:
+  - '2.1'
+  - '2.2'
+  last_reviewed: null
+  owner: Andy Bell
+  license: unknown
+  status: active
+- id: pagedjs-org
+  domain: Paged.js
+  url: pagedjs.org
+  full_url: https://pagedjs.org
+  best_for: CSS paged media, print CSS, PDF generation, page breaks, running headers
+  description: Open-source JavaScript library implementing the W3C CSS Paged Media Level 3 specification, enabling advanced print layout features in browsers.
+  authority_level: established
+  topic_tags:
+  - css
+  - print
+  - paged-media
+  - pdf
+  - open-source
+  jurisdiction: global
+  wcag_version: []
+  last_reviewed: null
+  owner: Paged.js community
+  license: MIT
+  status: active
+- id: sitepoint
+  domain: SitePoint
+  url: sitepoint.com
+  full_url: https://www.sitepoint.com
+  best_for: web development tutorials, CSS, JavaScript, accessibility, print CSS
+  description: Developer learning platform with tutorials covering HTML, CSS, JavaScript, and web accessibility including print stylesheet guidance.
+  authority_level: to_review
+  topic_tags:
+  - css
+  - print
+  - tutorial
+  - accessibility
+  - javascript
+  jurisdiction: global
+  wcag_version: []
+  last_reviewed: null
+  owner: SitePoint Pty Ltd
+  license: unknown
+  status: active
+- id: syntax-fm
+  domain: Syntax.fm
+  url: syntax.fm
+  full_url: https://syntax.fm
+  best_for: web development podcast, CSS, JavaScript, print CSS, developer education
+  description: Popular web development podcast by Wes Bos and Scott Tolinski covering modern web technologies including CSS print and PDF generation.
+  authority_level: to_review
+  topic_tags:
+  - css
+  - print
+  - podcast
+  - javascript
+  - pdf
+  jurisdiction: global
+  wcag_version: []
+  last_reviewed: null
+  owner: Syntax
+  license: unknown
+  status: active
+- id: printedcss-com
+  domain: PrintedCSS / Prince XML
+  url: printedcss.com
+  full_url: https://printedcss.com
+  best_for: CSS paged media, print CSS, PDF generation, commercial HTML-to-PDF
+  description: Commercial HTML-to-PDF engine (Prince XML / YesLogic) supporting comprehensive CSS Paged Media Level 3 and CSS Generated Content for Paged Media specifications.
+  authority_level: to_review
+  topic_tags:
+  - css
+  - print
+  - pdf
+  - paged-media
+  - commercial
+  jurisdiction: global
+  wcag_version: []
+  last_reviewed: null
+  owner: YesLogic Pty Ltd
+  license: commercial
+  status: active
