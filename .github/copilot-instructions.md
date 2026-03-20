@@ -36,6 +36,7 @@ See [AGENTS.md § Component-Specific Guidance](../AGENTS.md#component-specific-g
 - [Maps](../examples/MAPS_ACCESSIBILITY_BEST_PRACTICES.md)
 - [Mermaid diagrams](../examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md)
 - [Progressive enhancement](../examples/PROGRESSIVE_ENHANCEMENT_BEST_PRACTICES.md)
+- [Print styles](../examples/PRINT_ACCESSIBILITY_BEST_PRACTICES.md)
 - [SVG graphics](../examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md)
 - [User Personalization](../examples/USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES.md)
 - [Manual testing guide](../examples/MANUAL_ACCESSIBILITY_TESTING_GUIDE.md)
