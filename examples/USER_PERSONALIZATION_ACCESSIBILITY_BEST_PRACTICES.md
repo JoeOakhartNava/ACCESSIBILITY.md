@@ -130,7 +130,6 @@ Modern CSS provides powerful media queries that respect user preferences at the 
 
 - [MDN: Using Media Queries for Accessibility](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#accessibility_media_features)
 - [A More Inclusive Website Thanks to Media Queries](https://elevenways.be/en/articles/a-more-inclusive-website-thanks-to-media-queries)
-- [CSS Media Queries: Accessibility & Optimize Digital Product Design](https://dockyard.com/blog/2024/01/16/css-media-queries-accessibility-optimize-digital-product-design)
 
 ---
 
