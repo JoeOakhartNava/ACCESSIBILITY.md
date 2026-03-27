@@ -1,102 +1,104 @@
-# Skills
+# Skills Directory
 
-A collection of portable AI agent skill files for web accessibility and digital quality.
-
-## What Is This Directory?
-
-Each skill in this directory encodes a set of best practices, rules, and code patterns as AI-actionable instructions. Skills are designed to be loaded into AI coding assistants (GitHub Copilot, Claude, Cursor, Codex, and others) so that the assistant automatically applies those standards when generating or reviewing code.
-
-Two formats are provided for each skill:
-
-| Format | File | Purpose |
-|---|---|---|
-| **Binary (ZIP)** | `<skill-name>.skill` | Single file to download and install — the entire skill in one portable archive |
-| **Expanded directory** | `<skill-name>/` | Human-readable source — tracked in Git, open to contributions and review |
-
-The expanded directory and the `.skill` ZIP are kept in sync. When you want to inspect or contribute to the rules, use the directory. When you want to install the skill into an AI tool, use the `.skill` file.
+AI agent skills derived from `examples/` best practice guides.
+Each skill distills a full example into agent-actionable rules.
+**The `examples/` file is always the canonical source of truth.**
 
 ## Available Skills
 
-| Skill | Download | Source | Description |
-|---|---|---|---|
-| **Opquast Digital Quality** | [`opquast-digital-quality.skill`](./opquast-digital-quality.skill) | [`opquast-digital-quality/`](./opquast-digital-quality/) | 244 web quality rules across 14 categories (content, security, forms, performance, privacy, and more). Complements WCAG 2.2 as a holistic quality baseline. |
+| Skill | Derived from | Install |
+|---|---|---|
+| [ACCESSIBILITY-general](./ACCESSIBILITY-general/SKILL.md) | `AGENTS.md` + project-wide | General project skill |
+| [anchor-links](./anchor-links/SKILL.md) | `examples/ANCHOR_LINKS_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [audio-video](./audio-video/SKILL.md) | `examples/AUDIO_VIDEO_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [charts-graphs](./charts-graphs/SKILL.md) | `examples/CHARTS_GRAPHS_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [content-design](./content-design/SKILL.md) | `examples/CONTENT_DESIGN_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [forms](./forms/SKILL.md) | `examples/FORMS_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [keyboard](./keyboard/SKILL.md) | `examples/KEYBOARD_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [light-dark-mode](./light-dark-mode/SKILL.md) | `examples/LIGHT_DARK_MODE_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [maps](./maps/SKILL.md) | `examples/MAPS_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [mermaid](./mermaid/SKILL.md) | `examples/MERMAID_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [print](./print/SKILL.md) | `examples/PRINT_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [progressive-enhancement](./progressive-enhancement/SKILL.md) | `examples/PROGRESSIVE_ENHANCEMENT_BEST_PRACTICES.md` | ✅ |
+| [svg](./svg/SKILL.md) | `examples/SVG_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [tooltips](./tooltips/SKILL.md) | `examples/TOOLTIP_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [user-personalization](./user-personalization/SKILL.md) | `examples/USER_PERSONALIZATION_ACCESSIBILITY_BEST_PRACTICES.md` | ✅ |
+| [opquast-digital-quality](./opquast-digital-quality/SKILL.md) | Opquast checklist (external) | ✅ |
 
-## What Are `.skill` Files?
+## How to Install Skills
 
-A `.skill` file is a ZIP archive containing one or more Markdown files that instruct AI agents how to behave. AI coding agents that support skills (such as [OpenAI Codex](https://github.com/openai/codex)) read these files from a designated skills directory and apply the guidelines to every task in that session.
+### Option 1: Claude Code (CLI) — Global Installation
 
-The `.skill` format allows:
-
-- **Portability** — a single file to copy, share, or version-pin
-- **Composability** — install multiple skills side-by-side for layered guidance
-- **Transparency** — ZIP archives are readable by any standard tool; nothing is hidden
-
-If an AI tool does not natively support `.skill` files, you can unzip the archive and point the tool at the extracted Markdown files instead.
-
-## How to Use These Skills
-
-### Install for OpenAI Codex (global)
-
-Run this one-liner to download and install a skill into `/etc/codex/skills`:
+Claude Code reads `.skill` ZIP archives from its global skills directory.
+Download the skill archive and place it in your Claude Code skills folder:
 
 ```bash
-TMP_DIR="$(mktemp -d)" \
-  && curl -fsSL "https://github.com/mgifford/ACCESSIBILITY.md/archive/refs/heads/main.zip" \
-       -o "$TMP_DIR/main.zip" \
-  && unzip -q "$TMP_DIR/main.zip" -d "$TMP_DIR" \
-  && sudo mkdir -p /etc/codex/skills/opquast-digital-quality \
-  && sudo cp "$TMP_DIR/ACCESSIBILITY.md-main/skills/opquast-digital-quality.skill" \
-             /etc/codex/skills/opquast-digital-quality/ \
-  && rm -rf "$TMP_DIR"
+# macOS / Linux
+curl -L https://github.com/mgifford/ACCESSIBILITY.md/raw/main/skills/light-dark-mode.skill \
+  -o ~/.claude/skills/light-dark-mode.skill
+
+# Or download any skill:
+curl -L https://github.com/mgifford/ACCESSIBILITY.md/raw/main/skills/<skill-name>.skill \
+  -o ~/.claude/skills/<skill-name>.skill
 ```
 
-> **Security note:** Review downloaded files before running `sudo cp`. Inspect the extracted files in `$TMP_DIR` after the download step.
+Claude Code will load all `.skill` archives from `~/.claude/skills/` automatically on startup.
 
-### Install manually (any AI tool)
+### Option 2: Claude.ai Projects — Browser Interface
 
-1. Download the `.skill` file for the skill you want.
-2. Unzip it: `unzip opquast-digital-quality.skill -d opquast-digital-quality`
-3. Place the resulting directory where your AI tool reads system prompts or instructions (e.g. `.cursor/rules/`, `.github/copilot-instructions.md`, or your tool's configured skills path).
-4. Restart or reload the AI tool session.
+To use skills with Claude in the browser (claude.ai):
 
-### Ask an AI agent to install from this repository
+1. Open **Claude.ai** → go to your **Project**
+2. Click **Project instructions** (or **Set project instructions**)
+3. Copy the contents of the relevant `SKILL.md` file(s) into the instructions field
+4. Claude will apply those rules for all conversations in that project
 
-Many AI agents (Claude, Codex, Cursor) can fetch and install skills on request:
+For the general skill, copy `skills/ACCESSIBILITY-general/SKILL.md`.
+For topic-specific work, also add the relevant topic skill (e.g., `skills/forms/SKILL.md`).
 
-```text
-Install the Opquast Digital Quality skill from
-https://github.com/mgifford/ACCESSIBILITY.md/tree/main/skills
+### Option 3: AGENTS.md — Project-Level (any AI agent)
+
+Reference skills in your project's `AGENTS.md` so any AI agent working on the repo knows to load them:
+
+```markdown
+## Skills
+
+Before working on color themes: read `skills/light-dark-mode/SKILL.md`
+Before working on forms: read `skills/forms/SKILL.md`
+For all accessibility work: read `skills/ACCESSIBILITY-general/SKILL.md`
 ```
 
-### Use the Markdown source directly
+### Option 4: Cursor / Copilot / Other Agents
 
-If you prefer to reference the expanded source rather than the ZIP:
-
-- [`opquast-digital-quality/SKILL.md`](./opquast-digital-quality/SKILL.md) — Quick-reference summary, code patterns, and anti-patterns
-- [`opquast-digital-quality/references/rules-part1.md`](./opquast-digital-quality/references/rules-part1.md) — Full rules 1–172 with code examples
-- [`opquast-digital-quality/references/rules-part2.md`](./opquast-digital-quality/references/rules-part2.md) — Full rules 173–244 with code examples
-
-## Skill Directory Structure
+Add skill file references to `.cursorrules`, your Copilot system prompt config, or equivalent:
 
 ```
-skills/
-├── README.md                          ← This file
-│
-├── opquast-digital-quality.skill      ← Downloadable ZIP (SKILL.md + references/)
-│
-└── opquast-digital-quality/           ← Expanded human-readable source
-    ├── SKILL.md                       ← Quick-reference summary and code patterns
-    └── references/
-        ├── rules-part1.md             ← Detailed rules 1–172 with code examples
-        └── rules-part2.md             ← Detailed rules 173–244 with code examples
+When working on forms, follow the rules in skills/forms/SKILL.md.
+When working on color themes, follow the rules in skills/light-dark-mode/SKILL.md.
 ```
 
-## Contributing
+## How Skills Stay in Sync
 
-To propose a change to an existing skill, edit the files inside the expanded `<skill-name>/` directory and open a pull request. A maintainer will regenerate the `.skill` ZIP from the updated source before merging.
+Each skill directory contains a `SYNC.md` recording:
+- `canonical_source` — which `examples/` file this skill is derived from
+- `last_synced_commit` — git SHA at last sync
 
-To propose a new skill, open an issue describing the framework or rule set you want to encode.
+`.github/workflows/skill-sync-check.yml` runs whenever an `examples/` file changes.
+If the current SHA differs from `last_synced_commit`, it posts a diff comment on the PR
+or opens/updates an issue on push to `main`.
 
-## License
+## Design Principle
 
-The Opquast Digital Quality rules are published under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by [Opquast](https://www.opquast.com/). This repository's skill packaging is MIT licensed. See [LICENSE](../LICENSE) for details.
+> Skills are distillations, not mirrors.
+
+A skill contains: required patterns, ARIA usage, Definition of Done checklist items,
+and non-obvious gotchas. It does NOT contain extended prose rationale or external links.
+This keeps skills compact and fast for agents to load.
+
+## Contributing a New Skill
+
+1. Identify a stable, reviewed file in `examples/`
+2. Create `skills/your-topic/SKILL.md` — distilled, agent-actionable rules
+3. Create `skills/your-topic/SYNC.md` — set `canonical_source`, leave `last_synced_commit` blank
+4. Build the ZIP: `cd skills && zip -r your-topic.skill your-topic/`
+5. Add a row to the table above and open a PR
